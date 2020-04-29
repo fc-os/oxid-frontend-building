@@ -1,0 +1,33 @@
+{
+  "name": "myproject",
+  "version": "1.0.0",
+  "description": "myproject Build",
+  "main": "index.php",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-filter": "^6.0.0",
+    "gulp-image": "^5.1.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-rm": "^2.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-svg2png": "^2.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-strip-css-comments": "^2.0.0"
+  },
+  "scripts": {
+    "build": "npm run build:styles && npm run build:scripts",
+    "build:styles": "gulp --project myproject styles",
+    "build:scripts": "gulp --project myproject scripts",
+    "build:fonts": "gulp --project myproject fonts",
+    "build:images": "gulp --project myproject images",
+    "build:sprites": "gulp --project myproject sprites",
+    "build:all": "gulp --project myproject"
+  },
+  "author": "FATCHIP GmbH",
+  "license": "ISC",
+  "dependencies": {}
+}

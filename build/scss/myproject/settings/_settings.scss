@@ -1,0 +1,61 @@
+$fc-color-blue:#009fe3;
+$fc-color-orange:#FFA200;
+$fc-color-red:#ff0000;
+$fc-color-green:#04990B;
+$fc-bg-color:#efefef;
+$fc-border-color:#e2e2e2;
+$fc-font:Verdana, Geneva, Arial, Helvetica, "sans-serif";
+$fc-color-grey:#333333;
+$fc-color-grey2:#5e5e5e;
+$fc-color-grey3:#d8d8d8;
+$fc-color-grey4:#e2e2e2;
+$fc-color-grey5:#fafafa;
+$fc-font-normal:400;
+$fc-font-bold:600;
+$fc-font-boldest:800;
+$fc-font-size-normal:14px;
+$fc-font-size-small:13px;
+
+
+$fc-font-color:$fc-color-grey2;
+$fc-footer-font-color:$fc-color-grey2;
+$fc-bg-url:"../bg/";
+
+$font-size-small-1:1rem; // 10px
+$font-size-small-2:1.2rem; // 12px
+$font-size-small-3:1.3rem; // 13px
+$font-size-medium-1:1.4rem; // 14px
+$font-size-medium-2:1.6rem; // 16px
+$font-size-medium-3:2rem; // 20px
+$font-size-big-1:2.2rem; // 22px
+$font-size-large-1:3.2rem; // 32px
+
+$page-header-border-color:$fc-color-grey4;
+
+$btn-cta-color: #fff;
+$btn-cta-bg: $fc-color-orange;
+$btn-cta-border: transparent;
+
+$btn-tag-color: $fc-color-grey2;
+$btn-tag-bg: $fc-bg-color;
+$btn-tag-border: transparent;
+
+$alert-padding:10px;
+$alert-info-bg:$fc-bg-color;
+$alert-info-border:$fc-color-grey4;
+$alert-info-text:$fc-color-grey2;
+
+
+$panel-inner-border:$fc-border-color;
+$panel-default-border:$fc-border-color;
+$panel-default-heading-bg:$fc-color-grey5;
+$panel-default-text:$fc-color-grey2;
+
+$slick-font-family:"inherit";
+
+
+
+
+$state-success-text:             $fc-color-green ;
+$state-warning-text:             $fc-color-orange ;
+$state-danger-text:              $fc-color-red ;
