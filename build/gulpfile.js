@@ -14,13 +14,28 @@
  */
 // fetch command line arguments
 
+const parseArgs = require('minimist')(process.argv.slice(2));
+console.log(parseArgs);
+console.log('project: '+parseArgs.project);
+console.log('dev mode: '+parseArgs.dev);
+
+const config = require('./core/config/config')();
+console.log(config);
+console.log(config.baseDir);
+console.log(config.getBuildDir());
+console.log(config.getSourceDir());
+console.log(config.getDestinationDir());
+return;
+
+const taskDir = './task/';
+
 const arguments = require('./scripts/arguments')(process.argv);
 const gulp = require('gulp');
 const plugins = require('gulp-load-plugins')();
 const svgSprite = require("gulp-svg-sprites");
 const buildDir = './';
 const generateDir = '../out/';
-const buildConfig = require('./config/' + arguments.project)('./');
+const buildConfig = require('./projects/' + arguments.project)('./');
 const buildShop = {
     name: arguments.project,
     outputPath: generateDir + arguments.project + '/src/',
@@ -29,7 +44,7 @@ const buildShop = {
 const buildScripts = buildConfig[0].scripts;
 const buildStyles = buildConfig[0].styles;
 
-//dont need global 
+//dont need global
 gulp.task('styles', function (done) {
     buildStyles.forEach(function (oBuild) {
         gulp.src(oBuild.input)
@@ -48,19 +63,11 @@ gulp.task('styles', function (done) {
     done();
 });
 
-gulp.task('scripts', function (done) {
-    buildScripts.forEach(function (oBuild) {
-        gulp.src(oBuild.input)
-            .pipe(plugins.concat(oBuild.output))
-            .pipe(plugins.uglify())
-            .pipe(gulp.dest(buildShop.outputPath + 'js'));
-    });
-    done();
-});
+gulp.task('scripts', require('./core/task/scripts'));
 
 gulp.task('sprites', function (done) {
     gulp.src([
-        buildDir + 'svg/global/*.svg', 
+        buildDir + 'svg/global/*.svg',
         buildDir + 'svg/' + buildShop.name + '/*.svg'
     ]).pipe(svgSprite({
         mode: "defs",

@@ -20,10 +20,10 @@ module.exports = function (buildDir) {
              * BASE
              */
             input: [
-                buildDir + 'js/vendor/vendor1/vendor.js',
-                buildDir + 'js/app.js',
+                buildDir + 'scripts/vendor/vendor1/vendor.scripts',
+                buildDir + 'scripts/app.scripts',
             ],
-            output: 'shop.min.js'
+            output: 'shop.min.scripts'
         },
 
         /**
@@ -31,35 +31,35 @@ module.exports = function (buildDir) {
          */
         {
             input: [
-                buildDir + 'js/pages/account.js',
+                buildDir + 'scripts/pages/account.scripts',
             ],
-            output: 'account.min.js'
+            output: 'account.min.scripts'
         },
 
         {
             input: [
-                buildDir + 'js/pages/list.js',
+                buildDir + 'scripts/pages/list.scripts',
             ],
-            output: 'list.min.js'
+            output: 'list.min.scripts'
         },
     ];
 
     const styles = [
         {
             input: [
-                buildDir + 'scss/myproject/app.scss',
+                buildDir + 'styles/myproject/app.styles',
             ],
             output: 'shop.min.css'
         },
         {
             input: [
-                buildDir + 'scss/myproject/pages/details.scss',
+                buildDir + 'styles/myproject/pages/details.styles',
             ],
             output: 'details.min.css'
         },
         {
             input: [
-                buildDir + 'scss/myproject/pages/list.scss',
+                buildDir + 'styles/myproject/pages/list.styles',
             ],
             output: 'list.min.css'
         },
